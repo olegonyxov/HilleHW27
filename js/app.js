@@ -82,6 +82,8 @@ function openModal(item) {
                     displayValue = displayValue.slice(0, -2);
                     info.innerHTML += `<p><strong>${key}:</strong> ${displayValue}</p>`;
                 })
+        } else if (key === "url") {
+            displayValue = value;
         } else if (typeof value === 'string' && value.startsWith("https://swapi.info/api/")) {            
             fetch(value)
                 .then(result => result.json())
@@ -89,7 +91,7 @@ function openModal(item) {
                     displayValue = result.name;
                     info.innerHTML += `<p><strong>${key}:</strong> ${displayValue}</p>`;
                 });
-        } else {
+        }  else {
             displayValue = value;
             info.innerHTML += `<p><strong>${key}:</strong> ${displayValue}</p>`;
         }
