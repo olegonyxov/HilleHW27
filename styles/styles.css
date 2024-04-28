@@ -1,0 +1,14 @@
+#elementBtn {
+    background-color: aqua;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15%;
+
+}
+#closeBtn {
+    margin-top: 20px;
+    padding : 5px;
+    background-color: rgb(98, 0, 255);
+    border: 2px solid black;
+    border-radius: 15%;
+}
